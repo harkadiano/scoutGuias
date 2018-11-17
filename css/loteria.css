@@ -1,0 +1,75 @@
+.buttonLoteria:active
+{
+    background-color: #F0D700!important;
+    font-style: bold;
+}
+.bolillaSorteada
+{
+    background-color: #FFD700!important;
+    color: black;
+}
+
+/* .btn:hover{
+    background-color: #00D700!important;
+} */
+
+/* .btn:focus{
+    background-color: #fff!important;
+} */
+.fondo-color{
+    background-color: black!important;
+}
+/* #FFD700 */
+.numerosSeleccionados
+{
+	float:left; 
+	width: 25%;
+	position: absolute;
+	font: arial;
+	font-size: 32;
+    font-style: bold;
+}
+.numtam{
+	font: arial;
+	font-size: 15;
+    font-style: bold;
+}
+/*# sourceMappingURL=bootstrap.css.map */
+.centrar
+  {
+    position: absolute;
+    /*nos posicionamos en el centro del navegador*/
+    top:50%;
+    left:50%;
+    /*determinamos una anchura*/
+    width:400px;
+    /*indicamos que el margen izquierdo, es la mitad de la anchura*/
+    margin-left:-200px;
+    /*determinamos una altura*/
+    height:300px;
+    /*indicamos que el margen superior, es la mitad de la altura*/
+    margin-top:-150px;
+    border:1px solid #808080;
+    padding:5px;
+  }
+
+.fontboton{
+    font: arial!important;
+    font-size: 26px!important;
+    font-style: bold!important;
+    /* font-family: impact!important; */
+    /* padding: 20px 20px; */
+}
+
+.space{
+   height: 4px;
+   width: 4px;   
+}
+
+.limpiar{
+    background-color: white;
+}
+
+.doble{
+    background-color: red;
+}
