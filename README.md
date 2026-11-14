@@ -7,7 +7,7 @@ Tablero de lotería (bingo) de una sola página para llevar el control de las bo
 1. Abrir `index.html` en un navegador. No requiere servidor ni instalación.
 2. Pulsar un número para marcarlo como sorteado (fondo amarillo). Pulsarlo de nuevo lo desmarca.
 3. El estado se guarda en el navegador (`localStorage`) y se conserva al recargar la página.
-4. El botón **Reiniciar** desmarca todas las bolillas, previa confirmación.
+4. El botón de recarga (icono circular) desmarca todas las bolillas, previa confirmación.
 
 ## Estructura
 
