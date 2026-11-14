@@ -76,6 +76,21 @@ body {
     color: #000;
 }
 
+.btn-reiniciar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(40px, 7vmin, 64px);
+    height: clamp(40px, 7vmin, 64px);
+    padding: 0;
+    border-radius: 50%;
+}
+
+.btn-reiniciar svg {
+    width: 55%;
+    height: 55%;
+}
+
 .acciones {
     flex: 0 0 auto;
     display: flex;
