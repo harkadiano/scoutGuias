@@ -1,75 +1,95 @@
-.buttonLoteria:active
-{
-    background-color: #F0D700!important;
-    font-style: bold;
-}
-.bolillaSorteada
-{
-    background-color: #FFD700!important;
-    color: black;
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #000;
+    overflow: hidden;
 }
 
-/* .btn:hover{
-    background-color: #00D700!important;
-} */
-
-/* .btn:focus{
-    background-color: #fff!important;
-} */
-.fondo-color{
-    background-color: black!important;
-}
-/* #FFD700 */
-.numerosSeleccionados
-{
-	float:left; 
-	width: 25%;
-	position: absolute;
-	font: arial;
-	font-size: 32;
-    font-style: bold;
-}
-.numtam{
-	font: arial;
-	font-size: 15;
-    font-style: bold;
-}
-/*# sourceMappingURL=bootstrap.css.map */
-.centrar
-  {
-    position: absolute;
-    /*nos posicionamos en el centro del navegador*/
-    top:50%;
-    left:50%;
-    /*determinamos una anchura*/
-    width:400px;
-    /*indicamos que el margen izquierdo, es la mitad de la anchura*/
-    margin-left:-200px;
-    /*determinamos una altura*/
-    height:300px;
-    /*indicamos que el margen superior, es la mitad de la altura*/
-    margin-top:-150px;
-    border:1px solid #808080;
-    padding:5px;
-  }
-
-.fontboton{
-    font: arial!important;
-    font-size: 26px!important;
-    font-style: bold!important;
-    /* font-family: impact!important; */
-    /* padding: 20px 20px; */
+/* Pantalla completa: tablero a la izquierda y acciones en el costado */
+.pantalla {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    padding: max(8px, env(safe-area-inset-top)) max(8px, env(safe-area-inset-right))
+             max(8px, env(safe-area-inset-bottom)) max(8px, env(safe-area-inset-left));
+    gap: 8px;
+    box-sizing: border-box;
 }
 
-.space{
-   height: 4px;
-   width: 4px;   
+/* El tablero ocupa todo el espacio disponible: 10 columnas x 9 filas */
+.tablero {
+    flex: 1 1 auto;
+    min-width: 0;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: clamp(2px, 0.5vmin, 6px);
+    container-type: size;
 }
 
-.limpiar{
-    background-color: white;
+.bolilla {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    /* Tamaño de fuente proporcional a la celda */
+    font-size: 4.5vmin;
+    font-size: min(3.6cqw, 4.8cqh);
+    line-height: 1;
+    background-color: #fff;
+    color: #212529;
+    border: 0;
+    border-radius: 6px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
-.doble{
-    background-color: red;
+.bolilla {
+    --bs-btn-color: #212529;
+    --bs-btn-bg: #fff;
+    --bs-btn-border-color: transparent;
+    --bs-btn-hover-color: #212529;
+    --bs-btn-hover-bg: #fff;
+    --bs-btn-hover-border-color: transparent;
+    --bs-btn-active-color: #000;
+    --bs-btn-active-bg: #FFD700;
+    --bs-btn-active-border-color: transparent;
+    --bs-btn-focus-shadow-rgb: 255, 215, 0;
+}
+
+.bolilla.bolillaSorteada,
+.bolilla.bolillaSorteada:hover {
+    --bs-btn-bg: #FFD700;
+    --bs-btn-hover-bg: #FFD700;
+    --bs-btn-color: #000;
+    --bs-btn-hover-color: #000;
+    background-color: #FFD700;
+    color: #000;
+}
+
+.acciones {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Pantallas verticales o angostas: el botón pasa debajo del tablero */
+@media (max-aspect-ratio: 1/1), (max-width: 575.98px) {
+    .pantalla {
+        flex-direction: column;
+    }
+
+    .acciones {
+        align-items: center;
+    }
 }
